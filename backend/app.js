@@ -23,6 +23,10 @@ app.use(express.json());
 app.use(cors(corsOptions));
 app.use(cookieparser());
 
+app.get('/' , async (req ,res)=>{
+    return res.status(200).json({message : "Server is running!"})
+})
+
 
 
 // {remeber to add this before trying the post method}
